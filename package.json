@@ -1,13 +1,10 @@
 {
   "name": "aestar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Aestar is an A* pathfinding algorithm for TypeScript ",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "type": "module",
-  "files": [
-    "/dist"
-  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/thebonejarmer/aestar.git"
@@ -18,15 +15,12 @@
     "typescript"
   ],
   "author": "Ruben Labruyere",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thebonejarmer/aestar/issues"
   },
   "homepage": "https://github.com/thebonejarmer/aestar#readme",
   "devDependencies": {
     "typescript": "^5.6.3"
-  },
-  "scripts": {
-    "build": "npx tsc"
   }
 }
