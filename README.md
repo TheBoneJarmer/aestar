@@ -1,15 +1,15 @@
-# AStarTS
+# Aestar
 
-AStarTS is an A* pathfinding algorithm library for TypeScript which uses async calls to calculate the path and supports dynamic updating of grids. Unlike most A* star pathfinding libraries AStarTS does not use a multidimensional array but a class instead. This allows for easier access to grid nodes and dynamically updating those nodes.
+Aestar is an A* pathfinding algorithm library for TypeScript which uses async calls to calculate the path and supports dynamic updating of grids. Unlike most A* star pathfinding libraries Aestar does not use a multidimensional array but a class instead. This allows for easier access to grid nodes and dynamically updating those nodes.
 
 ## Installation
 ```
-npm install astarts
+npm install aestar
 ```
 
 ## Usage
 ```ts
-import {Grid, Pathfinder} from "astarts";
+import {Grid, Pathfinder} from "aestar";
 
 const grid: Grid = new Grid(30, 20);
 const pathfinder: Pathfinder = new Pathfinder();
