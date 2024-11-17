@@ -1,0 +1,27 @@
+{
+  "name": "astarts",
+  "version": "0.1.0",
+  "description": "AStarTS is an A* pathfinding algorithm for TypeScript ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": ["/dist"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thebonejarmer/astarts.git"
+  },
+  "keywords": [
+    "astar",
+    "pathfinding",
+    "typescript"
+  ],
+  "author": "Ruben Labruyere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebonejarmer/astarts/issues"
+  },
+  "homepage": "https://github.com/thebonejarmer/astarts#readme"
+}
