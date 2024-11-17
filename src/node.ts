@@ -3,8 +3,8 @@ export class Node {
     private _y: number = 0;
     private _g: number = 0;
     private _h: number = 0;
-    private _blocked: boolean;
-    private _connection: Node;
+    private _blocked: boolean = false;
+    private _connection: Node = null;
 
     get x(): number {
         return this._x;

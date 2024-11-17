@@ -5,10 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "files": ["/dist"],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "files": [
+    "/dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/thebonejarmer/astarts.git"
@@ -23,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/thebonejarmer/astarts/issues"
   },
-  "homepage": "https://github.com/thebonejarmer/astarts#readme"
+  "homepage": "https://github.com/thebonejarmer/astarts#readme",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "build": "npx tsc"
+  }
 }

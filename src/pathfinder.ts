@@ -19,15 +19,12 @@ export class Pathfinder {
         return result;
     }
 
-    public findPath(grid: Grid, x1: number, y1: number, x2: number, y2: number): Node[] {
-        const start = grid.getNode(x1, y1);
-        const end = grid.getNode(x2, y2);
-
-        if (start == null || end == null) {
+    public async findPath(grid: Grid, startNode: Node, endNode: Node): Promise<Node[]> {
+        if (startNode == null || endNode == null) {
             return null;
         }
 
-        let toSearch: Node[] = [start];
+        let toSearch: Node[] = [startNode];
         let processed: Node[] = [];
 
         while (toSearch.length > 0) {
@@ -46,24 +43,23 @@ export class Pathfinder {
             processed.push(current);
             toSearch.splice(currentIndex, 1);
 
-            if (current.x == end.x && current.y == end.y) {
+            if (current == endNode) {
                 let path: Node[] = [];
-                let pathNode = end;
+                let pathNode = endNode;
 
-                while (pathNode != null && pathNode.x != start.x && pathNode.y != start.y) {
+                while (pathNode != null && pathNode != startNode) {
                     path.push(pathNode);
                     pathNode = pathNode.connection;
                 }
 
-                let result: Node[] = [];
-                result.push(start);
+                let result: Node[] = [startNode];
 
                 for (let i = path.length - 1; i > 0; i--) {
                     result.push(path[i]);
                 }
 
                 // Add the end node as well
-                result.push(end);
+                result.push(endNode);
 
                 return result;
             }
@@ -83,7 +79,7 @@ export class Pathfinder {
                     neighbour.connection = current;
 
                     if (!isInSearch) {
-                        neighbour.h = this.getDistance(neighbour, end);
+                        neighbour.h = this.getDistance(neighbour, endNode);
                         toSearch.push(neighbour);
                     }
                 }
